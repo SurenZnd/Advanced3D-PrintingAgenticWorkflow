@@ -1,0 +1,36 @@
+job_id: "sample-bracket-001"
+source:
+  type: "cad-solid" # cad-solid | cad-surface | triangulated-mesh | rendered-image | scan | mixed
+  files: []
+  known_dimensions_mm: {} # e.g. overall_width: 80.0
+  dimension_provenance: "specified" # specified | measured | inferred | unknown
+part:
+  purpose: "Describe the function"
+  quantity: 1
+  critical_features: []
+  load_direction: "unknown"
+  environment: "indoor"
+  mating_parts: []
+  fit_type: "none" # none | loose | sliding | press | snap | threaded | bearing | custom
+  expected_dimensions_mm: null # e.g. [80, 30, 12] in chosen model orientation
+printer:
+  manufacturer: "Bambu Lab"
+  model: "UNSPECIFIED"
+  build_volume_mm: null # explicitly set e.g. [X,Y,Z] from exact model / profile
+  nozzle_diameter_mm: 0.4 # assumed default: verify hardware
+  filament: "PLA" # assumed default, verify material and printer compatibility
+  build_plate: "UNSPECIFIED"
+  slicer: "Bambu Studio"
+  slicing_profile: "UNSPECIFIED"
+requirements:
+  priority: "dimensional_accuracy" # dimensional_accuracy | strength | appearance | speed
+  support_policy: "minimize" # minimize | allowed | avoid_if_possible | disallow
+  desired_finish: "standard"
+  editable_cad_required: true
+  deliverables: ["editable-source", "stl", "qa-report"]
+verification:
+  cad_available: false
+  python_available: false
+  bambu_studio_available: false
+  test_print_available: false
+assumptions_to_confirm: []
